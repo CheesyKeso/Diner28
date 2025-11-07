@@ -1,57 +1,103 @@
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f6f0e7;
+}
+
 .homepage-container {
-  position: relative;
-  width: 100vw;
-  height: 700px;
-  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 100vh;
+  background: #f6f0e7;
+  padding-bottom: 40px;
 }
 
 .homepage-bg {
-  width: 100vw;
-  height: 700px;
-  object-fit: cover;
+  width: 100%;
+  height: 400px;
+  background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSo61SmvNPbBwbIP13SIi4E8nHbjw4VWmEnqQ&s&fbclid=IwY2xjawN68IxleHRuA2FlbQIxMQBzcnRjBmFwcF9pZAEwAAEed3UazLFzYqgwEmUcVIx_kwoyw_GUGckUSgiilyommE8sekY4yvVl1UhQBM4_aem_PsqhpQ2f1OdMvAzuwoHOfQ');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+
+.homepage-bg::after {
+  content: "";
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(40, 30, 10, 0.55);
   z-index: 1;
 }
 
-.homepage-title {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: white;
-  font-size: 3rem;
-  font-weight: bold;
-  text-shadow: 2px 2px 8px #000;
+.homepage-bg-content {
+  position: relative;
   z-index: 2;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.homepage-title {
+  font-size: 5rem;
+  color: #fff;
+  font-weight: 900;
   text-align: center;
+  letter-spacing: 2px;
+  margin-bottom: 0;
+  line-height: 1.05;
+  text-shadow: 0 2px 12px rgba(0,0,0,0.25);
+  z-index: 2;
 }
 
 .homepage-description {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  background: white;
-  z-index: 3;
-  padding: 2.5rem 0 2rem 0;
-  box-sizing: border-box;
-  text-align: center;
+  font-size: 1.15rem;
+  color: #222;
+  margin-bottom: 2rem;
+  text-align: left;
+  max-width: 800px;
+  padding: 2.5rem 2.5rem 2rem 2.5rem;
+  margin-top: 40px;
+  position: relative;
+  align-self: center;
 }
 
 .homepage-quote {
-  font-size: 1.5rem;
-  font-weight: 600;
+  font-size: 1.15rem;
+  font-weight: bold;
   font-style: italic;
+  color: #6d4c1b;
+  text-align: center;
   margin-bottom: 1.2rem;
-  color: #222;
+  display: block;
 }
 
 .homepage-text {
-  font-size: 1.1rem;
-  color: #444;
+  color: #222;
+  font-size: 1.08rem;
   line-height: 1.7;
-  max-width: 700px;
-  margin: 0 auto;
+  text-align: center;
+}
+
+@media (max-width: 700px) {
+  .homepage-title {
+    font-size: 2.5rem;
+  }
+  .homepage-description {
+    padding: 1.2rem 0.7rem;
+    max-width: 98vw;
+    margin-top: 1rem;
+  }
+  .homepage-bg {
+    height: 220px;
+  }
 }
