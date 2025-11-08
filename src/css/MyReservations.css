@@ -7,6 +7,7 @@
 }
 
 .myreservations-container {
+  color: #000;
   background: #fff;
   padding: 2rem 2.5rem;
   border-radius: 8px;
@@ -17,13 +18,13 @@
 .myreservations-back-link {
   display: inline-block;
   margin: 1rem 0 0 2rem;
-  color: #333;
+  color: #000;
   text-decoration: none;
   font-size: 1rem;
 }
 
 .myreservations-login-message {
-  color: #c00;
+  color: #000;
   margin-top: 1rem;
 }
 
@@ -39,10 +40,11 @@
   display: flex;
   gap: 2rem;
   font-size: 1.1rem;
+  color: #000;
 }
 
 .myreservations-empty {
-  color: #888;
+  color: #000;
   margin-top: 2rem;
   font-size: 1.1rem;
 }
