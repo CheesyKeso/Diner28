@@ -16,11 +16,24 @@
 }
 
 .myreservations-back-link {
+  position: absolute;
+  top: 4rem;
+  left: 2rem;
+  z-index: 10;
   display: inline-block;
-  margin: 1rem 0 0 2rem;
-  color: #000;
+  color: #222;
   text-decoration: none;
+  font-weight: 500;
   font-size: 1rem;
+  transition: color 0.2s;
+  background: #fff;
+  padding: 0.25rem 0.75rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+
+.reservation-back-link:hover {
+  color: #c00;
 }
 
 .myreservations-login-message {
