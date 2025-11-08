@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useAuth } from '../contexts/AuthContext';
 import { Link } from 'react-router-dom';
-import Topbar from './Topbar';
+import Topbar from '../components/Topbar';
 import '../css/Reservation.css';
 
 export default function Reservation() {
